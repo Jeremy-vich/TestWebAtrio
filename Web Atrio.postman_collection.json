@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "f1ae73a0-77b0-44e4-9d37-6eb4b29e94e1",
+		"name": "Web Atrio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19127769"
+	},
+	"item": [
+		{
+			"name": "GetPeople",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7065/api/People",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7065",
+					"path": [
+						"api",
+						"People"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Jérémy\",\r\n  \"lastName\": \"Vich\",\r\n  \"birthDate\": \"1992-03-30\",\r\n  \"jobs\": [\r\n    {\r\n      \"jobName\": \"Développeur\",\r\n      \"companyName\": \"Activitae Emploi\",\r\n      \"isCurrent\": false,\r\n      \"startDate\": \"2018-04-01\",\r\n      \"endDate\": \"2022-11-01\"\r\n    },\r\n    {\r\n      \"jobName\": \"Développeur\",\r\n      \"companyName\": \"Docauto\",\r\n      \"isCurrent\": false,\r\n      \"startDate\": \"2022-12-01\",\r\n      \"endDate\": \"2023-11-17\"\r\n    },\r\n    {\r\n      \"jobName\": \"Développeur\",\r\n      \"companyName\": \"Web Atrio\",\r\n      \"isCurrent\": true,\r\n      \"startDate\": \"2024-02-07\",\r\n      \"endDate\": \"2023-11-17\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7065/api/People",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7065",
+					"path": [
+						"api",
+						"People"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddJob",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"jobName\": \"Développeur\",\r\n  \"companyName\": \"WebAtrio\",\r\n  \"isCurrent\": false,\r\n  \"startDate\": \"2019-01-08T08:33:16.194Z\",\r\n  \"endDate\": \"2024-02-08T08:33:16.194Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7065/api/People/{personId}/Jobs",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7065",
+					"path": [
+						"api",
+						"People",
+						"{personId}",
+						"Jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPeopleByCompany",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetJobsBetweenDates",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
